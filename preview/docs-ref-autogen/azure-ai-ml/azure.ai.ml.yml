@@ -1,0 +1,11 @@
+### YamlMime:PythonPackage
+uid: azure.ai.ml
+name: ml
+fullName: azure.ai.ml
+type: import
+functions:
+- uid: azure.ai.ml.template_main
+  name: template_main
+  signature: template_main()
+modules:
+- azure.ai.ml.template_code
