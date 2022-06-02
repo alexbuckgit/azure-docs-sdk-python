@@ -53,11 +53,9 @@ constructor:
       will raise a ValueError.'
     defaultValue: None
   - name: api_version
-    description: 'The Storage API version to use for requests. Default value is the
-      most recent service version that is
+    description: 'The Storage API version to use for requests. Default value is ''2019-07-07''.
 
-      compatible with the current SDK. Setting to an older version may result in reduced
-      feature compatibility.
+      Setting to an older version may result in reduced feature compatibility.
 
 
       New in version 12.2.0.'
@@ -115,19 +113,20 @@ examples:
 - "Get a ContainerClient from an existing BlobServiceClient.<!--[!code-python[Main](les\\\
   blob_samples_containers.py )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\"\
   : [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\
-  \\1\\\\s\\\\dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
-  , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
-  : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   # Instantiate\
-  \ a BlobServiceClient using a connection string\n   from azure.storage.blob import\
-  \ BlobServiceClient\n   blob_service_client = BlobServiceClient.from_connection_string(self.connection_string)\n\
+  \\_work\\\\1\\\\s\\\\dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\
+  \\blob_samples_containers.py\", \"xml:space\": \"preserve\", \"force\": false, \"\
+  language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\": false}\
+  \ -->\n\n````python\n\n   # Instantiate a BlobServiceClient using a connection string\n\
+  \   from azure.storage.blob import BlobServiceClient\n   blob_service_client = BlobServiceClient.from_connection_string(self.connection_string)\n\
   \n   # Instantiate a ContainerClient\n   container_client = blob_service_client.get_container_client(\"\
   mynewcontainer\")\n\n   ````\n\nCreating the container client directly.<!--[!code-python[Main](les\\\
   blob_samples_containers.py )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\"\
   : [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\
-  \\1\\\\s\\\\dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
-  , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
-  : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   from azure.storage.blob\
-  \ import ContainerClient\n\n   sas_url = \"https://account.blob.core.windows.net/mycontainer?sv=2015-04-05&st=2015-04-29T22%3A18%3A26Z&se=2015-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=Z%2FRHIX5Xcg0Mq2rqI3OlWTjEg2tYkboXr1P9ZUXDtkk%3D\"\
+  \\_work\\\\1\\\\s\\\\dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\
+  \\blob_samples_containers.py\", \"xml:space\": \"preserve\", \"force\": false, \"\
+  language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\": false}\
+  \ -->\n\n````python\n\n   from azure.storage.blob import ContainerClient\n\n   sas_url\
+  \ = \"https://account.blob.core.windows.net/mycontainer?sv=2015-04-05&st=2015-04-29T22%3A18%3A26Z&se=2015-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=Z%2FRHIX5Xcg0Mq2rqI3OlWTjEg2tYkboXr1P9ZUXDtkk%3D\"\
   \n   container = ContainerClient.from_container_url(sas_url)\n\n   ````\n"
 methods:
 - uid: azure.storage.blob.ContainerClient.acquire_lease
@@ -204,8 +203,8 @@ methods:
   examples:
   - "Acquiring a lease on the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   # Acquire a lease on the container\n   lease = container_client.acquire_lease()\n\
@@ -252,8 +251,8 @@ methods:
   examples:
   - "Creating a container to store blobs.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   container_client.create_container()\n\n   ````\n"
@@ -396,10 +395,7 @@ methods:
     Soft deleted blobs or snapshots are accessible through <xref:azure.storage.blob.ContainerClient.list_blobs>
     specifying *include=["deleted"]*
 
-    Soft-deleted blobs or snapshots can be restored using <xref:BlobClient.undelete>
-
-
-    The maximum number of blobs that can be deleted in a single request is 256.'
+    Soft-deleted blobs or snapshots can be restored using <xref:BlobClient.undelete>'
   signature: delete_blobs(*blobs, **kwargs) -> Iterator[HttpResponse]
   parameters:
   - name: blobs
@@ -479,9 +475,9 @@ methods:
   examples:
   - "Deleting multiple blobs.<!--[!code-python[Main](les\\blob_samples_common.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
-    : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\\62\\\\\
-    azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_common.py\", \"xml:space\"\
-    : \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
+    : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
+    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_common.py\", \"\
+    xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
     : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   # Delete multiple\
     \ blobs in the container by name\n   container_client.delete_blobs(\"my_blob1\"\
     , \"my_blob2\")\n\n   # Delete multiple blobs by properties iterator\n   my_blobs\
@@ -548,11 +544,11 @@ methods:
   examples:
   - "Delete a container.<!--[!code-python[Main](les\\blob_samples_containers.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
-    : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\\62\\\\\
-    azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\", \"xml:space\"\
-    : \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
-    : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   container_client.delete_container()\n\
-    \n   ````\n"
+    : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
+    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
+    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
+    \n   container_client.delete_container()\n\n   ````\n"
 - uid: azure.storage.blob.ContainerClient.download_blob
   name: download_blob
   summary: 'Downloads a blob to the StorageStreamDownloader. The readall() method
@@ -588,18 +584,6 @@ methods:
     isRequired: true
     types:
     - <xref:int>
-  - name: version_id
-    description: 'The version id parameter is an opaque DateTime
-
-      value that, when present, specifies the version of the blob to download.
-
-
-      New in version 12.4.0.
-
-
-      This keyword argument was introduced in API version ''2019-12-12''.'
-    types:
-    - <xref:str>
   - name: validate_content
     description: 'If true, calculates an MD5 hash for each chunk of the blob. The
       storage
@@ -716,43 +700,11 @@ methods:
     - <xref:int>
   return:
     description: boolean
-- uid: azure.storage.blob.ContainerClient.find_blobs_by_tags
-  name: find_blobs_by_tags
-  summary: 'Returns a generator to list the blobs under the specified container whose
-    tags
-
-    match the given search expression.
-
-    The generator will lazily follow the continuation tokens returned by
-
-    the service.'
-  signature: 'find_blobs_by_tags(filter_expression: str, **kwargs: Optional[Any])
-    -> azure.core.paging.ItemPaged[azure.storage.blob._models.FilteredBlob]'
-  parameters:
-  - name: filter_expression
-    description: 'The expression to find blobs whose tags matches the specified condition.
-
-      eg. ""yourtagname"=''firsttag'' and "yourtagname2"=''secondtag''"'
-    isRequired: true
-    types:
-    - <xref:str>
-  - name: results_per_page
-    description: The max result per page when paginating.
-    types:
-    - <xref:int>
-  - name: timeout
-    description: The timeout parameter is expressed in seconds.
-    types:
-    - <xref:int>
-  return:
-    description: An iterable (auto-paging) response of FilteredBlob.
-    types:
-    - <xref:azure.core.paging.ItemPaged>[<xref:azure.storage.blob.BlobProperties>]
 - uid: azure.storage.blob.ContainerClient.from_connection_string
   name: from_connection_string
   summary: Create ContainerClient from a Connection String.
   signature: 'from_connection_string(conn_str: str, container_name: str, credential:
-    Optional[Any] = None, **kwargs: Any) -> ClassType'
+    Optional[Any] = None, **kwargs: Any) -> azure.storage.blob._container_client.ContainerClient'
   parameters:
   - name: conn_str
     description: A connection string to an Azure Storage account.
@@ -790,8 +742,8 @@ methods:
   - "Creating the ContainerClient from a connection string.<!--[!code-python[Main](les\\\
     blob_samples_authentication.py )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\"\
     : [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\\
-    a\\\\1\\\\s\\\\dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\\
-    blob_samples_authentication.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\
+    \\blob_samples_authentication.py\", \"xml:space\": \"preserve\", \"force\": false,\
     \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
     : false} -->\n\n````python\n\n   from azure.storage.blob import ContainerClient\n\
     \   container_client = ContainerClient.from_connection_string(\n       self.connection_string,\
@@ -799,8 +751,8 @@ methods:
 - uid: azure.storage.blob.ContainerClient.from_container_url
   name: from_container_url
   summary: Create ContainerClient from a container url.
-  signature: 'from_container_url(container_url: Type[ClassType], credential: str =
-    None, **kwargs: Optional[Any]) -> ClassType'
+  signature: 'from_container_url(container_url: str, credential: Optional[Any] = None,
+    **kwargs: Any) -> azure.storage.blob._container_client.ContainerClient'
   parameters:
   - name: container_url
     description: 'The full endpoint URL to the Container, including SAS token if used.
@@ -880,12 +832,13 @@ methods:
   examples:
   - "Get the blob client.<!--[!code-python[Main](les\\blob_samples_containers.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
-    : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\\62\\\\\
-    azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\", \"xml:space\"\
-    : \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
-    : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   # Get the\
-    \ BlobClient from the ContainerClient to interact with a specific blob\n   blob_client\
-    \ = container_client.get_blob_client(\"mynewblob\")\n\n   ````\n"
+    : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
+    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
+    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
+    \n   # Get the BlobClient from the ContainerClient to interact with a specific\
+    \ blob\n   blob_client = container_client.get_blob_client(\"mynewblob\")\n\n \
+    \  ````\n"
 - uid: azure.storage.blob.ContainerClient.get_container_access_policy
   name: get_container_access_policy
   summary: 'Gets the permissions for the specified container.
@@ -911,8 +864,8 @@ methods:
   examples:
   - "Getting the access policy on the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   policy = container_client.get_container_access_policy()\n\n   ````\n"
@@ -941,8 +894,8 @@ methods:
   examples:
   - "Getting properties on the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   properties = container_client.get_container_properties()\n\n   ````\n"
@@ -984,8 +937,8 @@ methods:
   examples:
   - "List the blobs in the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   blobs_list = container_client.list_blobs()\n   for blob in blobs_list:\n\
@@ -1060,8 +1013,8 @@ methods:
   examples:
   - "Setting access policy on the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   # Create access policy\n   from azure.storage.blob import AccessPolicy, ContainerSasPermissions\n\
@@ -1141,8 +1094,8 @@ methods:
   examples:
   - "Setting metadata on the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   # Create key, value pairs for metadata\n   metadata = {'type': 'test'}\n\n\
@@ -1150,11 +1103,8 @@ methods:
     \n   ````\n"
 - uid: azure.storage.blob.ContainerClient.set_premium_page_blob_tier_blobs
   name: set_premium_page_blob_tier_blobs
-  summary: 'Sets the page blob tiers on all blobs. This API is only supported for
-    page blobs on premium accounts.
-
-
-    The maximum number of blobs that can be updated in a single request is 256.'
+  summary: Sets the page blob tiers on all blobs. This API is only supported for page
+    blobs on premium accounts.
   signature: 'set_premium_page_blob_tier_blobs(premium_page_blob_tier: Optional[Union[str,
     PremiumPageBlobTier]], *blobs: List[Union[str, BlobProperties, dict]], **kwargs)
     -> Iterator[HttpResponse]'
@@ -1221,10 +1171,7 @@ methods:
 
     A block blob''s tier determines Hot/Cool/Archive storage type.
 
-    This operation does not update the blob''s ETag.
-
-
-    The maximum number of blobs that can be updated in a single request is 256.'
+    This operation does not update the blob''s ETag.'
   signature: 'set_standard_blob_tier_blobs(standard_blob_tier: Optional[Union[str,
     StandardBlobTier]], *blobs: List[Union[str, BlobProperties, dict]], **kwargs)
     -> Iterator[HttpResponse]'
@@ -1311,7 +1258,7 @@ methods:
   summary: Creates a new blob from a data source with automatic chunking.
   signature: 'upload_blob(name: Union[str, azure.storage.blob._models.BlobProperties],
     data: Union[Iterable, IO], blob_type: Union[str, azure.storage.blob._models.BlobType]
-    = <BlobType.BLOCKBLOB: ''BlockBlob''>, length: Optional[int] = None, metadata:
+    = <BlobType.BlockBlob: ''BlockBlob''>, length: Optional[int] = None, metadata:
     Optional[Dict[str, str]] = None, **kwargs) -> azure.storage.blob._blob_client.BlobClient'
   parameters:
   - name: name
@@ -1521,8 +1468,8 @@ methods:
   examples:
   - "Upload blob to the container.<!--[!code-python[Main](les\\blob_samples_containers.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\1\\\\s\\\\dist_temp\\\
-    \\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
+    dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
+    dist_temp\\\\62\\\\azure-storage-blob-12.12.0b1\\\\samples\\\\blob_samples_containers.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   with open(SOURCE_FILE, \"rb\") as data:\n       blob_client = container_client.upload_blob(name=\"\
