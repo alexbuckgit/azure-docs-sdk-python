@@ -11,9 +11,9 @@ inheritances:
 - builtins.str
 - enum.Enum
 fields:
-- name: BLOB
-  uid: azure.storage.blob.PublicAccess.BLOB
-- name: CONTAINER
-  uid: azure.storage.blob.PublicAccess.CONTAINER
+- name: Blob
+  uid: azure.storage.blob.PublicAccess.Blob
+- name: Container
+  uid: azure.storage.blob.PublicAccess.Container
 - name: 'OFF'
   uid: azure.storage.blob.PublicAccess.OFF

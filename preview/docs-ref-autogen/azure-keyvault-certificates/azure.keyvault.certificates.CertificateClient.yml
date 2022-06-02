@@ -34,7 +34,7 @@ examples:
 - "Create a new `CertificateClient`<!--[!code-python[Main](s\\test_examples_certificates.py\
   \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
   : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\\
-  52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+  52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
   , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
   : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   from azure.identity\
   \ import DefaultAzureCredential\n   from azure.keyvault.certificates import CertificateClient\n\
@@ -75,12 +75,12 @@ methods:
   - "Get a certificate backup<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # backup certificate\n   certificate_backup = certificate_client.backup_certificate(cert_name)\n\
-    \n   # returns the raw bytes of the backed up certificate\n   print(certificate_backup)\n\
-    \n   ````\n"
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # backup certificate\n   certificate_backup =\
+    \ certificate_client.backup_certificate(cert_name)\n\n   # returns the raw bytes\
+    \ of the backed up certificate\n   print(certificate_backup)\n\n   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.begin_create_certificate
   name: begin_create_certificate
   summary: "Creates a new certificate.\n\nIf this is the first version, the certificate\
@@ -131,13 +131,14 @@ methods:
   - "Create a certificate<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   from azure.keyvault.certificates import CertificatePolicy, CertificateContentType,\
-    \ WellKnownIssuerNames\n\n   # specify the certificate policy\n   cert_policy\
-    \ = CertificatePolicy(\n       issuer_name=WellKnownIssuerNames.self,\n      \
-    \ subject=\"CN=*.microsoft.com\",\n       san_dns_names=[\"sdk.azure-int.net\"\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   from azure.keyvault.certificates import (CertificateContentType,\n\
+    \                                            CertificatePolicy,\n            \
+    \                                WellKnownIssuerNames)\n\n   # specify the certificate\
+    \ policy\n   cert_policy = CertificatePolicy(\n       issuer_name=WellKnownIssuerNames.self,\n\
+    \       subject=\"CN=*.microsoft.com\",\n       san_dns_names=[\"sdk.azure-int.net\"\
     ],\n       exportable=True,\n       key_type=\"RSA\",\n       key_size=2048,\n\
     \       reuse_key=False,\n       content_type=CertificateContentType.pkcs12,\n\
     \       validity_in_months=24,\n   )\n\n   # create a certificate with optional\
@@ -192,11 +193,12 @@ methods:
   - "Delete a certificate<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # delete a certificate\n   deleted_certificate = certificate_client.begin_delete_certificate(certificate.name).result()\n\
-    \n   print(deleted_certificate.name)\n\n   # if the vault has soft-delete enabled,\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # delete a certificate\n   deleted_certificate\
+    \ = certificate_client.begin_delete_certificate(certificate.name).result()\n\n\
+    \   print(deleted_certificate.name)\n\n   # if the vault has soft-delete enabled,\
     \ the certificate's deleted date,\n   # scheduled purge date, and recovery id\
     \ are available\n   print(deleted_certificate.deleted_on)\n   print(deleted_certificate.scheduled_purge_date)\n\
     \   print(deleted_certificate.recovery_id)\n\n   ````\n"
@@ -243,11 +245,12 @@ methods:
   - "Recover a deleted certificate<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # recover a deleted certificate to its latest version (requires soft-delete\
-    \ enabled for the vault)\n   recovered_certificate = certificate_client.begin_recover_deleted_certificate(cert_name).result()\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # recover a deleted certificate to its latest\
+    \ version (requires soft-delete enabled for the vault)\n   recovered_certificate\
+    \ = certificate_client.begin_recover_deleted_certificate(cert_name).result()\n\
     \n   print(recovered_certificate.id)\n   print(recovered_certificate.name)\n\n\
     \   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.cancel_certificate_operation
@@ -316,7 +319,7 @@ methods:
   - "Create an issuer<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   from azure.keyvault.certificates import AdministratorContact\n\n   # First\
@@ -364,7 +367,7 @@ methods:
   - "Delete contacts<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   deleted_contacts = certificate_client.delete_contacts()\n\n   for deleted_contact\
@@ -393,7 +396,7 @@ methods:
   - "Delete an issuer<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   deleted_issuer = certificate_client.delete_issuer(\"issuer1\")\n\n   print(deleted_issuer.name)\n\
@@ -431,7 +434,7 @@ methods:
   - "Get a certificate<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   # get the certificate\n   certificate = certificate_client.get_certificate(cert_name)\n\
@@ -511,11 +514,12 @@ methods:
   - "Get a certificate with a specific version<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   certificate = certificate_client.get_certificate_version(cert_name, version)\n\
-    \n   print(certificate.id)\n   print(certificate.properties.version)\n\n   ````\n"
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   certificate = certificate_client.get_certificate_version(cert_name,\
+    \ version)\n\n   print(certificate.id)\n   print(certificate.properties.version)\n\
+    \n   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.get_contacts
   name: get_contacts
   summary: Gets the certificate contacts for the key vault. Requires the certificates/managecontacts
@@ -531,7 +535,7 @@ methods:
   - "Get contacts<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\n\
     <!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   contacts = certificate_client.get_contacts()\n\n   # Loop through the certificate\
@@ -568,11 +572,11 @@ methods:
   - "Get a deleted certificate<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # get a deleted certificate (requires soft-delete enabled for the vault)\n\
-    \   deleted_certificate = certificate_client.get_deleted_certificate(cert_name)\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # get a deleted certificate (requires soft-delete\
+    \ enabled for the vault)\n   deleted_certificate = certificate_client.get_deleted_certificate(cert_name)\n\
     \   print(deleted_certificate.name)\n\n   # if the vault has soft-delete enabled,\
     \ the certificate's deleted date,\n   # scheduled purge date, and recovery id\
     \ are available\n   print(deleted_certificate.deleted_on)\n   print(deleted_certificate.scheduled_purge_date)\n\
@@ -601,7 +605,7 @@ methods:
   - "Get an issuer<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   issuer = certificate_client.get_issuer(\"issuer1\")\n\n   print(issuer.name)\n\
@@ -699,11 +703,11 @@ methods:
   - "List all the deleted certificates<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # get an iterator of deleted certificates (requires soft-delete enabled for\
-    \ the vault)\n   deleted_certificates = certificate_client.list_deleted_certificates()\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # get an iterator of deleted certificates (requires\
+    \ soft-delete enabled for the vault)\n   deleted_certificates = certificate_client.list_deleted_certificates()\n\
     \n   for certificate in deleted_certificates:\n       print(certificate.id)\n\
     \       print(certificate.name)\n       print(certificate.deleted_on)\n      \
     \ print(certificate.scheduled_purge_date)\n       print(certificate.deleted_on)\n\
@@ -732,11 +736,11 @@ methods:
   - "List all versions of a certificate<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # get an iterator of a certificate's versions\n   certificate_versions =\
-    \ certificate_client.list_properties_of_certificate_versions(certificate_name)\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # get an iterator of a certificate's versions\n\
+    \   certificate_versions = certificate_client.list_properties_of_certificate_versions(certificate_name)\n\
     \n   for certificate in certificate_versions:\n       print(certificate.id)\n\
     \       print(certificate.updated_on)\n       print(certificate.version)\n\n \
     \  ````\n"
@@ -764,11 +768,12 @@ methods:
   - "List all certificates<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # get an iterator of certificates\n   certificates = certificate_client.list_properties_of_certificates()\n\
-    \n   for certificate in certificates:\n       print(certificate.id)\n       print(certificate.created_on)\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # get an iterator of certificates\n   certificates\
+    \ = certificate_client.list_properties_of_certificates()\n\n   for certificate\
+    \ in certificates:\n       print(certificate.id)\n       print(certificate.created_on)\n\
     \       print(certificate.name)\n       print(certificate.updated_on)\n      \
     \ print(certificate.enabled)\n\n   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.list_properties_of_issuers
@@ -788,12 +793,12 @@ methods:
   - "List issuers of a vault<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   issuers = certificate_client.list_properties_of_issuers()\n\n   for issuer\
-    \ in issuers:\n       print(issuer.name)\n       print(issuer.provider)\n\n  \
-    \ ````\n"
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   issuers = certificate_client.list_properties_of_issuers()\n\
+    \n   for issuer in issuers:\n       print(issuer.name)\n       print(issuer.provider)\n\
+    \n   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.merge_certificate
   name: merge_certificate
   summary: 'Merges a certificate or a certificate chain with a key pair existing on
@@ -901,11 +906,12 @@ methods:
   - "Restore a certificate backup<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # restore a certificate backup\n   restored_certificate = certificate_client.restore_certificate_backup(certificate_backup)\n\
-    \n   print(restored_certificate.id)\n   print(restored_certificate.name)\n   print(restored_certificate.properties.version)\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # restore a certificate backup\n   restored_certificate\
+    \ = certificate_client.restore_certificate_backup(certificate_backup)\n\n   print(restored_certificate.id)\n\
+    \   print(restored_certificate.name)\n   print(restored_certificate.properties.version)\n\
     \n   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.set_contacts
   name: set_contacts
@@ -929,7 +935,7 @@ methods:
   - "Create contacts<!--[!code-python[Main](s\\test_examples_certificates.py )]-->\n\
     \n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
     : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\
-    \\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
+    \\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\test_examples_certificates.py\"\
     , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
     \n   from azure.keyvault.certificates import CertificateContact\n\n   # Create\
@@ -941,7 +947,7 @@ methods:
     \       print(contact.phone)\n\n   ````\n"
 - uid: azure.keyvault.certificates.CertificateClient.update_certificate_policy
   name: update_certificate_policy
-  summary: 'Updates the policy for a certificate. Requires certificiates/update permission.
+  summary: 'Updates the policy for a certificate. Requires certificates/update permission.
 
 
     Set specified members in the certificate policy. Leaves others as null.'
@@ -1000,11 +1006,11 @@ methods:
   - "Update a certificate's attributes<!--[!code-python[Main](s\\test_examples_certificates.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.0b3\\\\tests\\\\test_examples_certificates.py\"\
-    , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
-    highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
-    \n   # update attributes of an existing certificate\n   tags = {\"foo\": \"updated\
-    \ tag\"}\n   updated_certificate = certificate_client.update_certificate_properties(\n\
+    dist_temp\\\\52\\\\azure-keyvault-certificates-4.4.1a20220602001\\\\tests\\\\\
+    test_examples_certificates.py\", \"xml:space\": \"preserve\", \"force\": false,\
+    \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+    : false} -->\n\n````python\n\n   # update attributes of an existing certificate\n\
+    \   tags = {\"foo\": \"updated tag\"}\n   updated_certificate = certificate_client.update_certificate_properties(\n\
     \       certificate_name=certificate.name, tags=tags\n   )\n\n   print(updated_certificate.properties.version)\n\
     \   print(updated_certificate.properties.updated_on)\n   print(updated_certificate.properties.tags)\n\
     \n   ````\n"

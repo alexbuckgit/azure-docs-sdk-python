@@ -1,0 +1,21 @@
+### YamlMime:PythonEnum
+uid: azure.ai.ml.constants.ComponentSource
+name: ComponentSource
+fullName: azure.ai.ml.constants.ComponentSource
+summary: Indicate where the component is constructed.
+module: azure.ai.ml.constants
+constructor:
+  syntax: ComponentSource(value)
+inheritances:
+- enum.Enum
+fields:
+- name: BUILDER
+  uid: azure.ai.ml.constants.ComponentSource.BUILDER
+- name: DSL
+  uid: azure.ai.ml.constants.ComponentSource.DSL
+- name: OTHER
+  uid: azure.ai.ml.constants.ComponentSource.OTHER
+- name: REST
+  uid: azure.ai.ml.constants.ComponentSource.REST
+- name: YAML
+  uid: azure.ai.ml.constants.ComponentSource.YAML
