@@ -62,7 +62,7 @@ examples:
 - "Creating the FormTrainingClient with an endpoint and API key.<!--[!code-python[Main](les\\\
   v3.1\\async_samples\\sample_authentication_async.py )]-->\n\n<!-- literal_block\
   \ {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\":\
-  \ [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\
+  \ [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\
   \\samples\\\\v3.1\\\\async_samples\\\\sample_authentication_async.py\", \"xml:space\"\
   : \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\":\
   \ {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   from azure.core.credentials\
@@ -73,12 +73,13 @@ examples:
   \ token credential.<!--[!code-python[Main](les\\v3.1\\async_samples\\sample_authentication_async.py\
   \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\"\
   : [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\\
-  57\\\\azure-ai-formrecognizer-3.2.0b4\\\\samples\\\\v3.1\\\\async_samples\\\\sample_authentication_async.py\"\
-  , \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
-  : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   \"\"\"DefaultAzureCredential\
-  \ will use the values from these environment\n   variables: AZURE_CLIENT_ID, AZURE_TENANT_ID,\
-  \ AZURE_CLIENT_SECRET\n   \"\"\"\n   from azure.ai.formrecognizer.aio import FormTrainingClient\n\
-  \   from azure.identity.aio import DefaultAzureCredential\n\n   endpoint = os.environ[\"\
+  57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\\samples\\\\v3.1\\\\async_samples\\\
+  \\sample_authentication_async.py\", \"xml:space\": \"preserve\", \"force\": false,\
+  \ \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"linenos\"\
+  : false} -->\n\n````python\n\n   \"\"\"DefaultAzureCredential will use the values\
+  \ from these environment\n   variables: AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_CLIENT_SECRET\n\
+  \   \"\"\"\n   from azure.ai.formrecognizer.aio import FormTrainingClient\n   from\
+  \ azure.identity.aio import DefaultAzureCredential\n\n   endpoint = os.environ[\"\
   AZURE_FORM_RECOGNIZER_ENDPOINT\"]\n   credential = DefaultAzureCredential()\n\n\
   \   form_training_client = FormTrainingClient(endpoint, credential)\n\n   ````\n"
 methods:
@@ -126,7 +127,7 @@ methods:
   - "Copy a model from the source resource to the target resource<!--[!code-python[Main](les\\\
     v3.1\\async_samples\\sample_copy_model_async.py )]-->\n\n<!-- literal_block {\"\
     ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\": [],\
-    \ \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\
+    \ \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\
     \\samples\\\\v3.1\\\\async_samples\\\\sample_copy_model_async.py\", \"xml:space\"\
     : \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
     : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   source_client\
@@ -180,13 +181,13 @@ methods:
   - "Create a composed model<!--[!code-python[Main](les\\v3.1\\async_samples\\sample_create_composed_model_async.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\\samples\\\\v3.1\\\\async_samples\\\
-    \\sample_create_composed_model_async.py\", \"xml:space\": \"preserve\", \"force\"\
-    : false, \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"\
-    linenos\": false} -->\n\n````python\n\n   from azure.core.credentials import AzureKeyCredential\n\
-    \   from azure.ai.formrecognizer.aio import FormTrainingClient\n\n   endpoint\
-    \ = os.environ[\"AZURE_FORM_RECOGNIZER_ENDPOINT\"]\n   key = os.environ[\"AZURE_FORM_RECOGNIZER_KEY\"\
-    ]\n   po_supplies = os.environ['PURCHASE_ORDER_OFFICE_SUPPLIES_SAS_URL_V2']\n\
+    dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\\samples\\\\v3.1\\\
+    \\async_samples\\\\sample_create_composed_model_async.py\", \"xml:space\": \"\
+    preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\": {\"\
+    linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   from azure.core.credentials\
+    \ import AzureKeyCredential\n   from azure.ai.formrecognizer.aio import FormTrainingClient\n\
+    \n   endpoint = os.environ[\"AZURE_FORM_RECOGNIZER_ENDPOINT\"]\n   key = os.environ[\"\
+    AZURE_FORM_RECOGNIZER_KEY\"]\n   po_supplies = os.environ['PURCHASE_ORDER_OFFICE_SUPPLIES_SAS_URL_V2']\n\
     \   po_equipment = os.environ['PURCHASE_ORDER_OFFICE_EQUIPMENT_SAS_URL_V2']\n\
     \   po_furniture = os.environ['PURCHASE_ORDER_OFFICE_FURNITURE_SAS_URL_V2']\n\
     \   po_cleaning_supplies = os.environ['PURCHASE_ORDER_OFFICE_CLEANING_SUPPLIES_SAS_URL_V2']\n\
@@ -303,8 +304,8 @@ methods:
     v3.1\\async_samples\\sample_train_model_without_labels_async.py )]-->\n\n<!--\
     \ literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [],\
     \ \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\\
-    57\\\\azure-ai-formrecognizer-3.2.0b4\\\\samples\\\\v3.1\\\\async_samples\\\\\
-    sample_train_model_without_labels_async.py\", \"xml:space\": \"preserve\", \"\
+    57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\\samples\\\\v3.1\\\\async_samples\\\
+    \\sample_train_model_without_labels_async.py\", \"xml:space\": \"preserve\", \"\
     force\": false, \"language\": \"python\", \"highlight_args\": {\"linenostart\"\
     : 1}, \"linenos\": false} -->\n\n````python\n\n   from azure.ai.formrecognizer.aio\
     \ import FormTrainingClient\n   from azure.core.credentials import AzureKeyCredential\n\
@@ -349,10 +350,10 @@ methods:
   - "Delete a custom model.<!--[!code-python[Main](les\\v3.1\\async_samples\\sample_manage_custom_models_async.py\
     \ )]-->\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
     dupnames\": [], \"backrefs\": [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\\
-    dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\\samples\\\\v3.1\\\\async_samples\\\
-    \\sample_manage_custom_models_async.py\", \"xml:space\": \"preserve\", \"force\"\
-    : false, \"language\": \"python\", \"highlight_args\": {\"linenostart\": 1}, \"\
-    linenos\": false} -->\n\n````python\n\n   await form_training_client.delete_model(model_id=custom_model.model_id)\n\
+    dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\\samples\\\\v3.1\\\
+    \\async_samples\\\\sample_manage_custom_models_async.py\", \"xml:space\": \"preserve\"\
+    , \"force\": false, \"language\": \"python\", \"highlight_args\": {\"linenostart\"\
+    : 1}, \"linenos\": false} -->\n\n````python\n\n   await form_training_client.delete_model(model_id=custom_model.model_id)\n\
     \n   try:\n       await form_training_client.get_custom_model(model_id=custom_model.model_id)\n\
     \   except ResourceNotFoundError:\n       print(\"Successfully deleted model with\
     \ id {}\".format(custom_model.model_id))\n\n   ````\n"
@@ -372,7 +373,7 @@ methods:
   - "Get properties for the form recognizer account.<!--[!code-python[Main](les\\\
     v3.1\\async_samples\\sample_manage_custom_models_async.py )]-->\n\n<!-- literal_block\
     \ {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\"\
-    : [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\
+    : [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\
     \\samples\\\\v3.1\\\\async_samples\\\\sample_manage_custom_models_async.py\",\
     \ \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
@@ -424,7 +425,7 @@ methods:
   - "Authorize the target resource to receive the copied model<!--[!code-python[Main](les\\\
     v3.1\\async_samples\\sample_copy_model_async.py )]-->\n\n<!-- literal_block {\"\
     ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\": [],\
-    \ \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\
+    \ \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\
     \\samples\\\\v3.1\\\\async_samples\\\\sample_copy_model_async.py\", \"xml:space\"\
     : \"preserve\", \"force\": false, \"language\": \"python\", \"highlight_args\"\
     : {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\n   target_client\
@@ -457,7 +458,7 @@ methods:
   - "Get a custom model with a model ID.<!--[!code-python[Main](les\\v3.1\\async_samples\\\
     sample_manage_custom_models_async.py )]-->\n\n<!-- literal_block {\"ids\": [],\
     \ \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\": [], \"source\"\
-    : \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\
+    : \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\
     \\samples\\\\v3.1\\\\async_samples\\\\sample_manage_custom_models_async.py\",\
     \ \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
@@ -492,7 +493,7 @@ methods:
   - "List model information for each model on the account.<!--[!code-python[Main](les\\\
     v3.1\\async_samples\\sample_manage_custom_models_async.py )]-->\n\n<!-- literal_block\
     \ {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\"\
-    : [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0b4\\\
+    : [], \"source\": \"D:\\\\a\\\\_work\\\\1\\\\s\\\\dist_temp\\\\57\\\\azure-ai-formrecognizer-3.2.0a20220601003\\\
     \\samples\\\\v3.1\\\\async_samples\\\\sample_manage_custom_models_async.py\",\
     \ \"xml:space\": \"preserve\", \"force\": false, \"language\": \"python\", \"\
     highlight_args\": {\"linenostart\": 1}, \"linenos\": false} -->\n\n````python\n\
